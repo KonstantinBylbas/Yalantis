@@ -1,0 +1,38 @@
+@import "./variables.scss";
+
+.App {
+  .row {
+    .employees {
+      width: 69%;
+      overflow-x: auto;
+
+      .column {
+        width: 15rem;
+        margin: 0 1rem;
+
+        h5 {
+          margin: 0 0 1rem 0;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .birthday {
+      width: 29%;
+      padding: 0 1rem;
+      border-left: solid 0.1rem;
+
+      .month {
+        margin: 0 0 2rem 0;
+        li {
+          margin: 0.8rem 0;
+          color: rgb(88, 88, 255);
+        }
+      }
+    }
+
+    h4 {
+      margin: 0 0 2rem 2rem;
+    }
+  }
+}
