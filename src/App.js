@@ -67,7 +67,12 @@ export default function App() {
                                             contextEmployees.map(employee => (
                                                 iterration++ ,
                                                 letter === employee.firstName.slice(0, 1).toLowerCase() ?
-                                                    (isEmpty = false, <Employee employee={employee} radioActive={birthdays && birthdays.length ? birthdays.map(birthday => birthday.id === employee.id ? true : false) : console.log('empty')} hideBirthday={() => hideBirthday(employee)} showBirthday={() => showBirthday(employee)} />)
+                                                    (isEmpty = false, <Employee employee={employee} 
+                                                            radioActive={birthdays && birthdays.length 
+                                                                ? birthdays.find(birthday => birthday.id === employee.id) 
+                                                                : false} 
+                                                                hideBirthday={hideBirthday} showBirthday={showBirthday} 
+                                                                />)
                                                     : isEmpty && iterration === contextEmployees.length ?
                                                         <p>No Employees</p>
                                                         : ''
